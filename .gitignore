@@ -1,0 +1,19 @@
+# Dataset
+data/raw/candidates.jsonl
+data/raw/*.jsonl
+
+# Generated artifacts
+data/processed/
+data/submissions/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
