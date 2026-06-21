@@ -1,0 +1,265 @@
+
+BOTTOM 5 CANDIDATES (DETAILED)
+
+
+====================================================================================================
+RANK #1
+Score: -2.44
+Candidate ID: CAND_0083345
+
+Title: Operations Manager
+Company: TCS
+Experience: 13.4 years
+
+SCORE BREAKDOWN
+--------------------------------------------------
+Semantic      : -10.00
+Career        : 0.00
+Experience    : 0.12
+Behavior      : 0.19
+Availability  : 0.00
+
+SUMMARY
+--------------------------------------------------
+Professional with 13.4+ years of experience. I'm a marketing manager with substantial experience in cross-functional collaboration, stakeholder management, and execution. Lately I've been curious about how AI tools could augment my work — I've experimented with ChatGPT and a few other tools for productivity and content creation, and I think the space is exciting. Open to roles where I can apply my domain expertise alongside emerging AI capabilities.
+
+TOP CAREER ENTRIES
+--------------------------------------------------
+
+Job #1
+Company: TCS
+Title: Operations Manager
+Description:
+Customer support team lead at a SaaS product. Managed a team of 8 support agents handling tier-1 and tier-2 tickets; owned the escalation process to engineering and the customer-feedback loop to product. Built out the support knowledge base and the agent training program. Strong on the people-management side and the process side; lighter on technical depth beyond product expertise.
+
+Job #2
+Company: TCS
+Title: Civil Engineer
+Description:
+Customer support team lead at a SaaS product. Managed a team of 8 support agents handling tier-1 and tier-2 tickets; owned the escalation process to engineering and the customer-feedback loop to product. Built out the support knowledge base and the agent training program. Strong on the people-management side and the process side; lighter on technical depth beyond product expertise.
+
+TOP SKILLS
+--------------------------------------------------
+SAP (endorsements=8, duration=18m)
+MongoDB (endorsements=11, duration=33m)
+Airflow (endorsements=2, duration=29m)
+CI/CD (endorsements=14, duration=5m)
+Project Management (endorsements=5, duration=33m)
+
+REDROB SIGNALS
+--------------------------------------------------
+Open To Work: False
+Github Activity: 8.9
+Recruiter Response: 0.35
+Interview Completion: 0.32
+Notice Period: 150 days
+Saved By Recruiters: 0
+
+====================================================================================================
+RANK #2
+Score: -2.45
+Candidate ID: CAND_0063126
+
+Title: Accountant
+Company: Stark Industries
+Experience: 1.6 years
+
+SCORE BREAKDOWN
+--------------------------------------------------
+Semantic      : -10.00
+Career        : 0.00
+Experience    : 0.12
+Behavior      : 0.18
+Availability  : 0.00
+
+SUMMARY
+--------------------------------------------------
+Professional with 1.6+ years of experience. I've spent my career in marketing manager roles, mostly focused on driving outcomes through process, people, and customer relationships. Lately I've been curious about how AI tools could augment my work — I've experimented with ChatGPT and a few other tools for productivity and content creation, and I think the space is exciting. Open to roles where I can apply my domain expertise alongside emerging AI capabilities.
+
+TOP CAREER ENTRIES
+--------------------------------------------------
+
+Job #1
+Company: Stark Industries
+Title: Accountant
+Description:
+Customer support team lead at a SaaS product. Managed a team of 8 support agents handling tier-1 and tier-2 tickets; owned the escalation process to engineering and the customer-feedback loop to product. Built out the support knowledge base and the agent training program. Strong on the people-management side and the process side; lighter on technical depth beyond product expertise.
+
+TOP SKILLS
+--------------------------------------------------
+Tailwind (endorsements=8, duration=5m)
+Salesforce CRM (endorsements=2, duration=2m)
+Data Science (endorsements=38, duration=49m)
+PostgreSQL (endorsements=1, duration=6m)
+Airflow (endorsements=8, duration=30m)
+REST APIs (endorsements=11, duration=11m)
+JavaScript (endorsements=8, duration=3m)
+Flask (endorsements=2, duration=36m)
+Content Writing (endorsements=0, duration=20m)
+
+REDROB SIGNALS
+--------------------------------------------------
+Open To Work: False
+Github Activity: -1
+Recruiter Response: 0.3
+Interview Completion: 0.4
+Notice Period: 150 days
+Saved By Recruiters: 1
+
+====================================================================================================
+RANK #3
+Score: -2.45
+Candidate ID: CAND_0029284
+
+Title: Operations Manager
+Company: Wayne Enterprises
+Experience: 1.9 years
+
+SCORE BREAKDOWN
+--------------------------------------------------
+Semantic      : -10.00
+Career        : 0.00
+Experience    : 0.12
+Behavior      : 0.18
+Availability  : 0.00
+
+SUMMARY
+--------------------------------------------------
+Professional with 1.9+ years of experience. I'm a marketing manager with substantial experience in cross-functional collaboration, stakeholder management, and execution. Lately I've been curious about how AI tools could augment my work — I've experimented with ChatGPT and a few other tools for productivity and content creation, and I think the space is exciting. Open to roles where I can apply my domain expertise alongside emerging AI capabilities.
+
+TOP CAREER ENTRIES
+--------------------------------------------------
+
+Job #1
+Company: Wayne Enterprises
+Title: Operations Manager
+Description:
+Marketing leadership role at a B2B SaaS company. Owned the demand-generation function — content marketing, paid acquisition, SEO, email nurture. Built and managed a team of 5 across content, performance marketing, and marketing operations. Worked closely with sales on lead-quality definitions and the SDR-handoff process. Recent focus has been on account-based marketing for our enterprise segment.
+
+TOP SKILLS
+--------------------------------------------------
+Snowflake (endorsements=11, duration=12m)
+Salesforce CRM (endorsements=4, duration=21m)
+Excel (endorsements=7, duration=22m)
+PowerPoint (endorsements=7, duration=18m)
+ASR (endorsements=9, duration=34m)
+Six Sigma (endorsements=11, duration=17m)
+Next.js (endorsements=0, duration=15m)
+Apache Beam (endorsements=10, duration=18m)
+CI/CD (endorsements=11, duration=4m)
+SAP (endorsements=10, duration=7m)
+
+REDROB SIGNALS
+--------------------------------------------------
+Open To Work: False
+Github Activity: -1
+Recruiter Response: 0.31
+Interview Completion: 0.32
+Notice Period: 150 days
+Saved By Recruiters: 2
+
+====================================================================================================
+RANK #4
+Score: -2.46
+Candidate ID: CAND_0095116
+
+Title: Marketing Manager
+Company: Infosys
+Experience: 1.1 years
+
+SCORE BREAKDOWN
+--------------------------------------------------
+Semantic      : -10.00
+Career        : 0.00
+Experience    : 0.12
+Behavior      : 0.11
+Availability  : 0.00
+
+SUMMARY
+--------------------------------------------------
+Marketing Manager with 1.1+ years of experience driving outcomes in my domain. I have built strong functional expertise in the typical responsibilities of the role, including team management, stakeholder communication, and project delivery. Recently I've been excited about how AI and GenAI tools can augment my work. I've been taking online courses on RAG and vector databases, experimenting with LangChain and the OpenAI API for side projects, and exploring how LLMs can streamline workflows in my current function. Open to roles that combine my existing domain experience with emerging AI technologies — I think the most interesting opportunities are at this intersection. Looking for positions where I can contribute both my functional expertise and grow my AI capabilities.
+
+TOP CAREER ENTRIES
+--------------------------------------------------
+
+Job #1
+Company: Infosys
+Title: Marketing Manager
+Description:
+Marketing leadership role at a B2B SaaS company. Owned the demand-generation function — content marketing, paid acquisition, SEO, email nurture. Built and managed a team of 5 across content, performance marketing, and marketing operations. Worked closely with sales on lead-quality definitions and the SDR-handoff process. Recent focus has been on account-based marketing for our enterprise segment.
+
+TOP SKILLS
+--------------------------------------------------
+Agile (endorsements=14, duration=15m)
+CSS (endorsements=1, duration=4m)
+Excel (endorsements=15, duration=23m)
+Databricks (endorsements=4, duration=19m)
+Docker (endorsements=11, duration=9m)
+Illustrator (endorsements=3, duration=10m)
+Vector Search (endorsements=3, duration=4m)
+Pinecone (endorsements=3, duration=12m)
+Hugging Face Transformers (endorsements=1, duration=15m)
+LLMs (endorsements=4, duration=18m)
+
+REDROB SIGNALS
+--------------------------------------------------
+Open To Work: False
+Github Activity: -1
+Recruiter Response: 0.12
+Interview Completion: 0.33
+Notice Period: 150 days
+Saved By Recruiters: 0
+
+====================================================================================================
+RANK #5
+Score: -2.46
+Candidate ID: CAND_0075453
+
+Title: Operations Manager
+Company: TCS
+Experience: 13.3 years
+
+SCORE BREAKDOWN
+--------------------------------------------------
+Semantic      : -10.00
+Career        : 0.00
+Experience    : 0.12
+Behavior      : 0.10
+Availability  : 0.00
+
+SUMMARY
+--------------------------------------------------
+Professional with 13.3+ years of experience. My professional background is in marketing manager — I've built and led teams, owned KPIs, and driven business outcomes in this domain. Lately I've been curious about how AI tools could augment my work — I've experimented with ChatGPT and a few other tools for productivity and content creation, and I think the space is exciting. Open to roles where I can apply my domain expertise alongside emerging AI capabilities.
+
+TOP CAREER ENTRIES
+--------------------------------------------------
+
+Job #1
+Company: TCS
+Title: Operations Manager
+Description:
+Senior accounting role at a mid-sized company — month-end close, financial reporting, statutory compliance (GAAP / Ind-AS), and tax filings. Owned the GL, fixed-asset register, and the audit-readiness function. Managed a team of 3 staff accountants. Built strong process discipline around the close cycle, reducing close time from 12 days to 7 over the last two years.
+
+Job #2
+Company: Wipro
+Title: Project Manager
+Description:
+Business analyst at a consulting firm, working primarily with retail and CPG clients. Conducted business diagnostics, process re-engineering work, and digital transformation strategy projects. Strong on stakeholder management, structured problem-solving, and the typical consulting toolkit (slide-craft, Excel modeling, executive communication). Recent project work involved AI-strategy advisory but my own technical depth in AI is limited.
+
+TOP SKILLS
+--------------------------------------------------
+CI/CD (endorsements=1, duration=19m)
+BentoML (endorsements=0, duration=30m)
+Tailwind (endorsements=11, duration=18m)
+Hadoop (endorsements=1, duration=12m)
+SQL (endorsements=6, duration=26m)
+Agile (endorsements=7, duration=23m)
+
+REDROB SIGNALS
+--------------------------------------------------
+Open To Work: False
+Github Activity: -1
+Recruiter Response: 0.1
+Interview Completion: 0.32
+Notice Period: 120 days
+Saved By Recruiters: 0
