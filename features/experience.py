@@ -25,6 +25,24 @@ NON_TECH_KEYWORDS = {
     "recruiter",
 }
 
+RETRIEVAL_KEYWORDS = {
+    "retrieval",
+    "search",
+    "ranking",
+    "recommendation",
+    "recommender",
+    "vector",
+    "embedding",
+    "elasticsearch",
+    "opensearch",
+    "faiss",
+    "pinecone",
+    "weaviate",
+    "qdrant",
+    "milvus",
+    "bm25",
+}
+
 def experience_score(candidate: Candidate) -> float:
     score = 0.0
 
@@ -39,11 +57,14 @@ def experience_score(candidate: Candidate) -> float:
     else:
         score += 0.3
     
-    title_score = title_relevance_score(candidate)
+    experience = score
+    title = title_relevance_score(candidate)
+    retrieval = retrieval_experience_score(candidate)
 
     return (
-        0.6 * score
-        + 0.4 * title_score
+        0.40 * experience
+        + 0.30 * title
+        + 0.30 * retrieval
     )
 
 def title_relevance_score(candidate: Candidate) -> float:
@@ -56,3 +77,18 @@ def title_relevance_score(candidate: Candidate) -> float:
         return 1.0
 
     return 0.5
+
+
+def retrieval_experience_score(candidate: Candidate) -> float:
+    score = 0
+
+    for job in candidate.career_history:
+        text = (
+            job.title + " " + job.description
+        ).lower()
+
+        for keyword in RETRIEVAL_KEYWORDS:
+            if keyword in text:
+                score += 1
+
+    return min(score / 5, 1.0)

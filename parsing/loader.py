@@ -60,3 +60,19 @@ def load_sample_candidates(path: str) -> list[Candidate]:
     with open(path, "r", encoding="utf-8") as f:
         raw = json.load(f)
     return [parse_candidate(candidate) for candidate in raw]
+
+def load_candidates_jsonl(path: str, limit: int | None = None):
+    candidates = []
+
+    with open(path, "r", encoding="utf-8") as f:
+        for idx, line in enumerate(f):
+            candidate_dict = json.loads(line)
+
+            candidates.append(
+                parse_candidate(candidate_dict)
+            )
+
+            if limit is not None and len(candidates) >= limit:
+                break
+
+    return candidates
