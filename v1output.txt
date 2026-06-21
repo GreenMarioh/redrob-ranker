@@ -1,0 +1,253 @@
+
+TOP 5 CANDIDATES (DETAILED)
+
+
+====================================================================================================
+RANK #1
+Score: 42.00
+Candidate ID: CAND_0000031
+
+Title: Recommendation Systems Engineer
+Company: Swiggy
+Experience: 6.0 years
+
+SUMMARY
+--------------------------------------------------
+Machine learning engineer with 6.0 years of experience building ML-powered features in production. Strong background in NLP, recommendation systems, and applied AI; comfortable across the ML stack from feature engineering through deployment. Recently, I led the team that migrated our keyword-search-based product to embedding-based retrieval. I've learned that most retrieval problems are actually evaluation problems in disguise. My academic background is in CS/ML but my main learning has come from shipping real systems and seeing what holds up under production load. Open to senior IC roles in applied ML or AI engineering, ideally at product companies where I'd own a meaningful piece of the ML stack.
+
+TOP CAREER ENTRIES
+--------------------------------------------------
+
+Job #1
+Company: Swiggy
+Title: Recommendation Systems Engineer
+Description:
+Trained and shipped multiple ranking models for our product's discovery feed using XGBoost and LightGBM. Designed features across three families: content metadata, user behavior signals, and item engagement history. Owned the offline-online correlation analysis that determined which offline metrics actually predicted A/B test outcomes. Worked closely with PMs to define the optimization target (click-through vs. dwell time vs. downstream conversion) — that work was as important as the modeling itself.
+
+Job #2
+Company: Mad Street Den
+Title: Search Engineer
+Description:
+Trained and shipped multiple ranking models for our product's discovery feed using XGBoost and LightGBM. Designed features across three families: content metadata, user behavior signals, and item engagement history. Owned the offline-online correlation analysis that determined which offline metrics actually predicted A/B test outcomes. Worked closely with PMs to define the optimization target (click-through vs. dwell time vs. downstream conversion) — that work was as important as the modeling itself.
+
+TOP SKILLS
+--------------------------------------------------
+Go (endorsements=7, duration=19m)
+MLflow (endorsements=59, duration=21m)
+FAISS (endorsements=19, duration=35m)
+Pinecone (endorsements=34, duration=88m)
+Angular (endorsements=4, duration=18m)
+Image Classification (endorsements=56, duration=28m)
+Machine Learning (endorsements=43, duration=23m)
+Speech Recognition (endorsements=14, duration=24m)
+BentoML (endorsements=6, duration=14m)
+MLOps (endorsements=15, duration=36m)
+
+REDROB SIGNALS
+--------------------------------------------------
+Open To Work: True
+Github Activity: 32.6
+Recruiter Response: 0.91
+Interview Completion: 0.6
+Notice Period: 60 days
+Saved By Recruiters: 13
+
+====================================================================================================
+RANK #2
+Score: 17.41
+Candidate ID: CAND_0000273
+
+Title: ML Engineer
+Company: BYJU'S
+Experience: 5.8 years
+
+SUMMARY
+--------------------------------------------------
+Data scientist / ML engineer with 5.8 years of experience in applied machine learning. Worked across predictive modeling, NLP, analytics, and lightweight deployment workflows. Most of my recent work has been on predictive modeling for customer-facing problems — churn, conversion, lifetime value. I'm strongest at the modeling and analysis side; comfortable with Python, scikit-learn, pandas, and standard MLOps tooling, but I'm still building depth on the engineering and infra side of production ML. I'm looking to grow into a deeper AI/ML system-building role — closer to retrieval, LLMs, and modern ranking systems.
+
+TOP CAREER ENTRIES
+--------------------------------------------------
+
+Job #1
+Company: BYJU'S
+Title: ML Engineer
+Description:
+Built recommendation-style features at a mid-stage startup — lighter weight than ranking systems at FAANG, but production. Used a combination of collaborative filtering (matrix factorization in implicit-feedback library) and gradient-boosted re-ranking over engagement signals. Pure ML side of the work; production deployment was handled by the platform team.
+
+Job #2
+Company: Yellow.ai
+Title: Senior Software Engineer (ML)
+Description:
+Worked on time-series forecasting models for supply-chain demand prediction at a logistics company. Built models in Prophet, LightGBM, and (for one project) a small LSTM — the LightGBM model ended up shipping. Also ran some reinforcement learning experiments for dynamic pricing but those didn't make it to production. The work was a mix of modeling, analysis, and stakeholder communication with the operations team.
+
+TOP SKILLS
+--------------------------------------------------
+TTS (endorsements=30, duration=47m)
+Forecasting (endorsements=32, duration=60m)
+Spring Boot (endorsements=15, duration=25m)
+Fine-tuning LLMs (endorsements=2, duration=29m)
+Feature Engineering (endorsements=5, duration=20m)
+Diffusion Models (endorsements=0, duration=30m)
+Redis (endorsements=3, duration=13m)
+Qdrant (endorsements=15, duration=9m)
+Project Management (endorsements=8, duration=8m)
+LlamaIndex (endorsements=10, duration=9m)
+
+REDROB SIGNALS
+--------------------------------------------------
+Open To Work: True
+Github Activity: 29.2
+Recruiter Response: 0.47
+Interview Completion: 0.78
+Notice Period: 60 days
+Saved By Recruiters: 31
+
+====================================================================================================
+RANK #3
+Score: 17.30
+Candidate ID: CAND_0000410
+
+Title: Graphic Designer
+Company: Wipro
+Experience: 10.1 years
+
+SUMMARY
+--------------------------------------------------
+Graphic Designer with 10.1+ years of experience driving outcomes in my domain. I have built strong functional expertise in the typical responsibilities of the role, including team management, stakeholder communication, and project delivery. Recently I've been excited about how AI and GenAI tools can augment my work. I've been taking online courses on RAG and vector databases, experimenting with LangChain and the OpenAI API for side projects, and exploring how LLMs can streamline workflows in my current function. Open to roles that combine my existing domain experience with emerging AI technologies — I think the most interesting opportunities are at this intersection. Looking for positions where I can contribute both my functional expertise and grow my AI capabilities.
+
+TOP CAREER ENTRIES
+--------------------------------------------------
+
+Job #1
+Company: Wipro
+Title: Graphic Designer
+Description:
+Content writing and SEO strategy for a tech-focused publication. Wrote longform articles on developer tools, cloud platforms, and AI/ML topics — including some that ranked on the first page of search for high-competition keywords. Managed a freelance writer pool and the editorial calendar. Recent work has been on AI-assisted content production, using LLM tools for research, drafting, and editing while maintaining editorial quality.
+
+Job #2
+Company: Initech
+Title: Content Writer
+Description:
+Content writing and SEO strategy for a tech-focused publication. Wrote longform articles on developer tools, cloud platforms, and AI/ML topics — including some that ranked on the first page of search for high-competition keywords. Managed a freelance writer pool and the editorial calendar. Recent work has been on AI-assisted content production, using LLM tools for research, drafting, and editing while maintaining editorial quality.
+
+TOP SKILLS
+--------------------------------------------------
+Content Writing (endorsements=5, duration=6m)
+Microservices (endorsements=4, duration=28m)
+Flask (endorsements=10, duration=33m)
+REST APIs (endorsements=15, duration=31m)
+SAP (endorsements=14, duration=13m)
+Vector Search (endorsements=4, duration=5m)
+Sentence Transformers (endorsements=4, duration=5m)
+Semantic Search (endorsements=1, duration=4m)
+RAG (endorsements=4, duration=4m)
+Embeddings (endorsements=4, duration=7m)
+
+REDROB SIGNALS
+--------------------------------------------------
+Open To Work: True
+Github Activity: -1
+Recruiter Response: 0.5
+Interview Completion: 0.35
+Notice Period: 30 days
+Saved By Recruiters: 8
+
+====================================================================================================
+RANK #4
+Score: 17.23
+Candidate ID: CAND_0000883
+
+Title: Content Writer
+Company: Wayne Enterprises
+Experience: 14.9 years
+
+SUMMARY
+--------------------------------------------------
+Content Writer with 14.9+ years of experience driving outcomes in my domain. I have built strong functional expertise in the typical responsibilities of the role, including team management, stakeholder communication, and project delivery. Recently I've been excited about how AI and GenAI tools can augment my work. I've been taking online courses on RAG and vector databases, experimenting with LangChain and the OpenAI API for side projects, and exploring how LLMs can streamline workflows in my current function. Open to roles that combine my existing domain experience with emerging AI technologies — I think the most interesting opportunities are at this intersection. Looking for positions where I can contribute both my functional expertise and grow my AI capabilities.
+
+TOP CAREER ENTRIES
+--------------------------------------------------
+
+Job #1
+Company: Wayne Enterprises
+Title: Content Writer
+Description:
+Marketing leadership role at a B2B SaaS company. Owned the demand-generation function — content marketing, paid acquisition, SEO, email nurture. Built and managed a team of 5 across content, performance marketing, and marketing operations. Worked closely with sales on lead-quality definitions and the SDR-handoff process. Recent focus has been on account-based marketing for our enterprise segment.
+
+Job #2
+Company: Wayne Enterprises
+Title: Customer Support
+Description:
+Senior accounting role at a mid-sized company — month-end close, financial reporting, statutory compliance (GAAP / Ind-AS), and tax filings. Owned the GL, fixed-asset register, and the audit-readiness function. Managed a team of 3 staff accountants. Built strong process discipline around the close cycle, reducing close time from 12 days to 7 over the last two years.
+
+TOP SKILLS
+--------------------------------------------------
+Go (endorsements=12, duration=5m)
+Object Detection (endorsements=40, duration=55m)
+Accounting (endorsements=5, duration=17m)
+Hadoop (endorsements=7, duration=2m)
+Data Pipelines (endorsements=10, duration=18m)
+Apache Flink (endorsements=4, duration=9m)
+LangChain (endorsements=2, duration=18m)
+Embeddings (endorsements=4, duration=13m)
+Sentence Transformers (endorsements=1, duration=11m)
+Fine-tuning LLMs (endorsements=1, duration=9m)
+
+REDROB SIGNALS
+--------------------------------------------------
+Open To Work: False
+Github Activity: -1
+Recruiter Response: 0.09
+Interview Completion: 0.77
+Notice Period: 120 days
+Saved By Recruiters: 11
+
+====================================================================================================
+RANK #5
+Score: 16.27
+Candidate ID: CAND_0000454
+
+Title: Data Analyst
+Company: Accenture
+Experience: 5.8 years
+
+SUMMARY
+--------------------------------------------------
+Software / data professional with 5.8 years of experience building data pipelines, backend systems, and analytics infrastructure. Most of my work has been data pipelines and analytics infrastructure; I've shipped a couple of small ML features but it's not the core of my day. My toolkit is solid on the data engineering side — Python, SQL, Spark, Airflow, warehouse design — and I've completed a couple of self-directed ML projects (Kaggle competitions, side projects fine-tuning small models). Interested in transitioning toward more AI/ML-focused work, ideally at a company where I can leverage my existing data-infra skills while learning modern ML practice.
+
+TOP CAREER ENTRIES
+--------------------------------------------------
+
+Job #1
+Company: Accenture
+Title: Data Analyst
+Description:
+Built and maintained data pipelines on Apache Airflow processing ~500GB of daily transactional data across 12 source systems. Worked extensively with Spark (PySpark) for batch processing and dbt for the transformation/modeling layer in our Snowflake warehouse. Owned the on-call rotation for data quality issues — wrote most of the data quality checks that detect schema drift and unusual volume changes. The pipeline supports the analytics team and a few internal ML models.
+
+Job #2
+Company: Wipro
+Title: Software Engineer
+Description:
+Built and maintained data pipelines on Apache Airflow processing ~500GB of daily transactional data across 12 source systems. Worked extensively with Spark (PySpark) for batch processing and dbt for the transformation/modeling layer in our Snowflake warehouse. Owned the on-call rotation for data quality issues — wrote most of the data quality checks that detect schema drift and unusual volume changes. The pipeline supports the analytics team and a few internal ML models.
+
+TOP SKILLS
+--------------------------------------------------
+BigQuery (endorsements=0, duration=14m)
+pgvector (endorsements=2, duration=13m)
+Weights & Biases (endorsements=9, duration=13m)
+Computer Vision (endorsements=0, duration=34m)
+scikit-learn (endorsements=59, duration=29m)
+TTS (endorsements=58, duration=30m)
+Hugging Face Transformers (endorsements=45, duration=35m)
+Python (endorsements=8, duration=28m)
+Docker (endorsements=2, duration=10m)
+FastAPI (endorsements=8, duration=12m)
+
+REDROB SIGNALS
+--------------------------------------------------
+Open To Work: False
+Github Activity: -1
+Recruiter Response: 0.53
+Interview Completion: 0.63
+Notice Period: 120 days
+Saved By Recruiters: 23
