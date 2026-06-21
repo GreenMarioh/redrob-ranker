@@ -1,0 +1,331 @@
+Loading candidates...
+Loaded 10000 candidates
+Ranking candidates...
+
+TOP 25 CANDIDATES
+
+====================================================================================================
+Rank #1
+Score: 41.34
+Candidate ID: CAND_0001218
+AI Specialist @ Nykaa
+Experience: 6.4 years
+
+Breakdown
+Semantic      : 100.00
+Career        : 64.00
+Experience    : 1.00
+Behavior      : 0.56
+Availability  : 0.50
+====================================================================================================
+Rank #2
+Score: 39.87
+Candidate ID: CAND_0008425
+Senior NLP Engineer @ Ola
+Experience: 7.8 years
+
+Breakdown
+Semantic      : 104.00
+Career        : 54.00
+Experience    : 0.85
+Behavior      : 0.74
+Availability  : 0.60
+====================================================================================================
+Rank #3
+Score: 30.91
+Candidate ID: CAND_0000031
+Recommendation Systems Engineer @ Swiggy
+Experience: 6.0 years
+
+Breakdown
+Semantic      : 83.00
+Career        : 39.00
+Experience    : 1.00
+Behavior      : 0.62
+Availability  : 0.90
+====================================================================================================
+Rank #4
+Score: 29.87
+Candidate ID: CAND_0009691
+Applied ML Engineer @ LinkedIn
+Experience: 6.2 years
+
+Breakdown
+Semantic      : 71.00
+Career        : 47.00
+Experience    : 1.00
+Behavior      : 0.56
+Availability  : 0.70
+====================================================================================================
+Rank #5
+Score: 29.39
+Candidate ID: CAND_0001610
+Machine Learning Engineer @ Dream11
+Experience: 3.0 years
+
+Breakdown
+Semantic      : 83.00
+Career        : 33.00
+Experience    : 0.88
+Behavior      : 0.67
+Availability  : 0.80
+====================================================================================================
+Rank #6
+Score: 28.54
+Candidate ID: CAND_0005260
+Senior NLP Engineer @ Netflix
+Experience: 5.2 years
+
+Breakdown
+Semantic      : 84.00
+Career        : 29.00
+Experience    : 0.85
+Behavior      : 0.53
+Availability  : 0.40
+====================================================================================================
+Rank #7
+Score: 27.84
+Candidate ID: CAND_0007411
+Senior Machine Learning Engineer @ Amazon
+Experience: 8.0 years
+
+Breakdown
+Semantic      : 74.00
+Career        : 36.00
+Experience    : 1.00
+Behavior      : 0.49
+Availability  : 0.60
+====================================================================================================
+Rank #8
+Score: 27.38
+Candidate ID: CAND_0001930
+Senior Software Engineer (ML) @ Dream11
+Experience: 6.9 years
+
+Breakdown
+Semantic      : 64.00
+Career        : 44.00
+Experience    : 0.94
+Behavior      : 0.84
+Availability  : 0.50
+====================================================================================================
+Rank #9
+Score: 26.87
+Candidate ID: CAND_0007412
+Applied ML Engineer @ Zoho
+Experience: 7.4 years
+
+Breakdown
+Semantic      : 53.00
+Career        : 53.00
+Experience    : 1.00
+Behavior      : 0.75
+Availability  : 0.50
+====================================================================================================
+Rank #10
+Score: 26.39
+Candidate ID: CAND_0001494
+Data Scientist @ Haptik
+Experience: 6.4 years
+
+Breakdown
+Semantic      : 64.00
+Career        : 40.00
+Experience    : 0.94
+Behavior      : 0.63
+Availability  : 0.80
+====================================================================================================
+Rank #11
+Score: 26.29
+Candidate ID: CAND_0009236
+AI Specialist @ Vedantu
+Experience: 6.3 years
+
+Breakdown
+Semantic      : 64.00
+Career        : 40.00
+Experience    : 0.94
+Behavior      : 0.35
+Availability  : 0.50
+====================================================================================================
+Rank #12
+Score: 24.44
+Candidate ID: CAND_0005509
+Data Scientist @ Ola
+Experience: 6.0 years
+
+Breakdown
+Semantic      : 52.00
+Career        : 44.00
+Experience    : 1.00
+Behavior      : 0.69
+Availability  : 1.00
+====================================================================================================
+Rank #13
+Score: 23.82
+Candidate ID: CAND_0008978
+Junior ML Engineer @ Tech Mahindra
+Experience: 6.7 years
+
+Breakdown
+Semantic      : 52.00
+Career        : 42.00
+Experience    : 0.94
+Behavior      : 0.75
+Availability  : 0.20
+====================================================================================================
+Rank #14
+Score: 23.18
+Candidate ID: CAND_0005649
+Senior Data Scientist @ Sarvam AI
+Experience: 7.4 years
+
+Breakdown
+Semantic      : 62.00
+Career        : 29.00
+Experience    : 1.00
+Behavior      : 0.81
+Availability  : 0.80
+====================================================================================================
+Rank #15
+Score: 22.36
+Candidate ID: CAND_0003557
+ML Engineer @ Krutrim
+Experience: 6.8 years
+
+Breakdown
+Semantic      : 48.00
+Career        : 40.00
+Experience    : 0.94
+Behavior      : 0.62
+Availability  : 0.60
+====================================================================================================
+Rank #16
+Score: 22.19
+Candidate ID: CAND_0002025
+Senior AI Engineer @ Apple
+Experience: 5.9 years
+
+Breakdown
+Semantic      : 62.00
+Career        : 25.00
+Experience    : 0.94
+Behavior      : 0.89
+Availability  : 0.80
+====================================================================================================
+Rank #17
+Score: 21.89
+Candidate ID: CAND_0007009
+Recommendation Systems Engineer @ Wysa
+Experience: 7.9 years
+
+Breakdown
+Semantic      : 46.00
+Career        : 40.00
+Experience    : 1.00
+Behavior      : 0.61
+Availability  : 0.80
+====================================================================================================
+Rank #18
+Score: 21.56
+Candidate ID: CAND_0003977
+Recommendation Systems Engineer @ Google
+Experience: 4.6 years
+
+Breakdown
+Semantic      : 68.00
+Career        : 17.00
+Experience    : 0.88
+Behavior      : 0.68
+Availability  : 0.30
+====================================================================================================
+Rank #19
+Score: 21.37
+Candidate ID: CAND_0006538
+AI Specialist @ Dream11
+Experience: 5.7 years
+
+Breakdown
+Semantic      : 56.00
+Career        : 28.00
+Experience    : 0.88
+Behavior      : 0.59
+Availability  : 0.80
+====================================================================================================
+Rank #20
+Score: 21.36
+Candidate ID: CAND_0009024
+Search Engineer @ Google
+Experience: 5.2 years
+
+Breakdown
+Semantic      : 54.00
+Career        : 30.00
+Experience    : 1.00
+Behavior      : 0.55
+Availability  : 0.70
+====================================================================================================
+Rank #21
+Score: 19.37
+Candidate ID: CAND_0002120
+ML Engineer @ HCL
+Experience: 6.5 years
+
+Breakdown
+Semantic      : 52.00
+Career        : 24.00
+Experience    : 0.82
+Behavior      : 0.73
+Availability  : 0.70
+====================================================================================================
+Rank #22
+Score: 19.35
+Candidate ID: CAND_0008517
+AI Research Engineer @ Locobuzz
+Experience: 5.6 years
+
+Breakdown
+Semantic      : 48.00
+Career        : 28.00
+Experience    : 0.88
+Behavior      : 0.58
+Availability  : 0.70
+====================================================================================================
+Rank #23
+Score: 19.26
+Candidate ID: CAND_0008202
+Senior Software Engineer (ML) @ Yellow.ai
+Experience: 5.7 years
+
+Breakdown
+Semantic      : 48.00
+Career        : 28.00
+Experience    : 0.82
+Behavior      : 0.54
+Availability  : 0.20
+====================================================================================================
+Rank #24
+Score: 18.39
+Candidate ID: CAND_0000273
+ML Engineer @ BYJU'S
+Experience: 5.8 years
+
+Breakdown
+Semantic      : 48.00
+Career        : 24.00
+Experience    : 0.82
+Behavior      : 0.64
+Availability  : 0.90
+====================================================================================================
+Rank #25
+Score: 18.36
+Candidate ID: CAND_0003841
+ML Engineer @ Tech Mahindra
+Experience: 5.0 years
+
+Breakdown
+Semantic      : 48.00
+Career        : 24.00
+Experience    : 0.82
+Behavior      : 0.67
+Availability  : 0.70
