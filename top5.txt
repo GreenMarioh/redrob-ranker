@@ -1,0 +1,293 @@
+
+TOP 5 CANDIDATES (DETAILED)
+
+
+====================================================================================================
+RANK #1
+Score: 53.66
+Candidate ID: CAND_0088025
+
+Title: Staff Machine Learning Engineer
+Company: Yellow.ai
+Experience: 8.6 years
+
+SCORE BREAKDOWN
+--------------------------------------------------
+Semantic      : 138.00
+Career        : 75.00
+Experience    : 1.00
+Behavior      : 0.87
+Availability  : 0.60
+
+SUMMARY
+--------------------------------------------------
+Senior AI engineer with 8.6 years of hands-on experience building production ML systems, with a focus on search, retrieval, and ranking. Most recently, I designed the company's first hybrid retrieval system combining BM25 with dense vector recall, serving 50M+ queries per month. My day-to-day work spans embedding model selection and fine-tuning, hybrid retrieval architecture, learning-to-rank, behavioral-signal integration, and the offline/online evaluation that ties it all together. I've shipped systems in both early-stage product companies and at larger scale, and I've spent enough time on both that I know which tradeoffs apply where. I'm comfortable across the stack from infra to algorithms, but my heart is in retrieval and ranking. Currently exploring my next move — looking for senior IC or tech-lead roles where I can own the intelligence layer end-to-end.
+
+TOP CAREER ENTRIES
+--------------------------------------------------
+
+Job #1
+Company: Yellow.ai
+Title: Staff Machine Learning Engineer
+Description:
+Owned the end-to-end ranking pipeline at a recommendations-heavy consumer product: candidate sourcing → embedding generation (using a fine-tuned BGE-large) → Pinecone retrieval → learning-to-rank re-scoring (XGBoost) → behavioral-signal integration. The hardest part wasn't the ML — it was the evaluation: building offline metrics that actually predicted what the recommendation would do to live engagement. After three iterations we landed on a calibration approach using simulated A/B tests that has held up over the last 18 months.
+
+Job #2
+Company: Niramai
+Title: Staff Machine Learning Engineer
+Description:
+Owned the end-to-end ranking pipeline at a recommendations-heavy consumer product: candidate sourcing → embedding generation (using a fine-tuned BGE-large) → Pinecone retrieval → learning-to-rank re-scoring (XGBoost) → behavioral-signal integration. The hardest part wasn't the ML — it was the evaluation: building offline metrics that actually predicted what the recommendation would do to live engagement. After three iterations we landed on a calibration approach using simulated A/B tests that has held up over the last 18 months.
+
+TOP SKILLS
+--------------------------------------------------
+Pinecone (endorsements=25, duration=49m)
+QLoRA (endorsements=8, duration=83m)
+LLMs (endorsements=48, duration=71m)
+Hugging Face Transformers (endorsements=6, duration=55m)
+RAG (endorsements=56, duration=41m)
+SAP (endorsements=14, duration=7m)
+TensorFlow (endorsements=1, duration=86m)
+LoRA (endorsements=29, duration=22m)
+Flask (endorsements=5, duration=14m)
+Prompt Engineering (endorsements=37, duration=35m)
+
+REDROB SIGNALS
+--------------------------------------------------
+Open To Work: True
+Github Activity: 74.6
+Recruiter Response: 0.83
+Interview Completion: 0.95
+Notice Period: 90 days
+Saved By Recruiters: 19
+
+====================================================================================================
+RANK #2
+Score: 50.16
+Candidate ID: CAND_0039754
+
+Title: Senior Applied Scientist
+Company: Meta
+Experience: 16.2 years
+
+SCORE BREAKDOWN
+--------------------------------------------------
+Semantic      : 132.00
+Career        : 67.00
+Experience    : 0.57
+Behavior      : 0.89
+Availability  : 1.00
+
+SUMMARY
+--------------------------------------------------
+Senior AI engineer with 8.3 years of hands-on experience building production ML systems, with a focus on search, retrieval, and ranking. Most recently, I rebuilt the candidate-JD matching pipeline from scratch, taking it from 0.72 to 0.91 NDCG@10, serving 50M+ queries per month. My day-to-day work spans embedding model selection and fine-tuning, hybrid retrieval architecture, learning-to-rank, behavioral-signal integration, and the offline/online evaluation that ties it all together. I've shipped systems in both early-stage product companies and at larger scale, and I've spent enough time on both that I know which tradeoffs apply where. I believe most ranking problems are solved by careful feature engineering and rigorous eval, not by bigger models. Currently exploring my next move — looking for senior IC or tech-lead roles where I can own the intelligence layer end-to-end.
+
+TOP CAREER ENTRIES
+--------------------------------------------------
+
+Job #1
+Company: Meta
+Title: Senior Applied Scientist
+Description:
+Owned the end-to-end ranking pipeline at a recommendations-heavy consumer product: candidate sourcing → embedding generation (using a fine-tuned BGE-large) → Pinecone retrieval → learning-to-rank re-scoring (XGBoost) → behavioral-signal integration. The hardest part wasn't the ML — it was the evaluation: building offline metrics that actually predicted what the recommendation would do to live engagement. After three iterations we landed on a calibration approach using simulated A/B tests that has held up over the last 18 months.
+
+Job #2
+Company: Apple
+Title: Senior ML Engineer — Search & Ranking
+Description:
+Owned the design and rollout of a large-scale semantic search system serving an internal corpus of 35M+ items. Migrated the existing BM25-only retrieval to a hybrid setup combining sparse and dense vectors (sentence-transformers, MPNet-base initially, later fine-tuned BGE-large for our domain). The new system reduced p95 retrieval latency by 60% while improving NDCG@10 by 18% on our held-out eval set. Spent substantial time on the boring-but-critical parts: incremental index refresh, embedding drift monitoring, online/offline metric correlation. Led a team of 4 engineers across the rollout.
+
+TOP SKILLS
+--------------------------------------------------
+Fine-tuning LLMs (endorsements=7, duration=57m)
+LlamaIndex (endorsements=11, duration=19m)
+Qdrant (endorsements=28, duration=67m)
+Reinforcement Learning (endorsements=4, duration=34m)
+NLP (endorsements=58, duration=46m)
+Statistical Modeling (endorsements=5, duration=22m)
+Kubeflow (endorsements=34, duration=53m)
+ASR (endorsements=8, duration=29m)
+OpenSearch (endorsements=41, duration=71m)
+Deep Learning (endorsements=46, duration=68m)
+
+REDROB SIGNALS
+--------------------------------------------------
+Open To Work: True
+Github Activity: 77.5
+Recruiter Response: 0.81
+Interview Completion: 0.98
+Notice Period: 30 days
+Saved By Recruiters: 51
+
+====================================================================================================
+RANK #3
+Score: 46.66
+Candidate ID: CAND_0046064
+
+Title: Senior NLP Engineer
+Company: Salesforce
+Experience: 8.9 years
+
+SCORE BREAKDOWN
+--------------------------------------------------
+Semantic      : 126.00
+Career        : 59.00
+Experience    : 0.85
+Behavior      : 0.81
+Availability  : 0.80
+
+SUMMARY
+--------------------------------------------------
+Senior AI engineer with 8.9 years of hands-on experience building production ML systems, with a focus on search, retrieval, and ranking. Most recently, I rebuilt the candidate-JD matching pipeline from scratch, taking it from 0.72 to 0.91 NDCG@10, operating at single-digit-millisecond p95 retrieval latency. My day-to-day work spans embedding model selection and fine-tuning, hybrid retrieval architecture, learning-to-rank, behavioral-signal integration, and the offline/online evaluation that ties it all together. I've shipped systems in both early-stage product companies and at larger scale, and I've spent enough time on both that I know which tradeoffs apply where. I believe most ranking problems are solved by careful feature engineering and rigorous eval, not by bigger models. Currently exploring my next move — looking for senior IC or tech-lead roles where I can own the intelligence layer end-to-end.
+
+TOP CAREER ENTRIES
+--------------------------------------------------
+
+Job #1
+Company: Salesforce
+Title: Senior NLP Engineer
+Description:
+Fine-tuned LLaMA-2-7B and Mistral-7B variants using LoRA and QLoRA for domain-specific candidate-JD matching. Built the data curation pipeline that generated 200K high-quality preference pairs from recruiter labels, plus the eval harness using both ranking metrics and human-quality scores. Deployed the model via BentoML on Kubernetes with sub-200ms p95 latency by quantizing to INT8 and batching at the request level. Cost per inference dropped from $0.04 with GPT-3.5-fallback to under $0.001.
+
+Job #2
+Company: Verloop.io
+Title: Lead AI Engineer
+Description:
+Built a RAG-based ranking pipeline serving 50M+ queries per month for an internal recruiter-facing search product. The architecture combined BM25 + dense retrieval (BGE embeddings, FAISS HNSW) with an LLM-based re-ranker on the top-50, falling back to a learning-to-rank model when latency budget was tight. Designed the offline evaluation framework from scratch — NDCG, MRR, recall@K calibrated against online A/B engagement metrics. Drove the migration over 4 months including the recruiter-feedback loop that surfaced reranking edge cases.
+
+TOP SKILLS
+--------------------------------------------------
+Python (endorsements=41, duration=40m)
+Image Classification (endorsements=48, duration=21m)
+OpenCV (endorsements=27, duration=34m)
+Pinecone (endorsements=58, duration=85m)
+Haystack (endorsements=18, duration=75m)
+Six Sigma (endorsements=1, duration=12m)
+TTS (endorsements=39, duration=18m)
+Diffusion Models (endorsements=7, duration=30m)
+BM25 (endorsements=58, duration=64m)
+YOLO (endorsements=36, duration=36m)
+
+REDROB SIGNALS
+--------------------------------------------------
+Open To Work: True
+Github Activity: 67.3
+Recruiter Response: 0.78
+Interview Completion: 0.8
+Notice Period: 30 days
+Saved By Recruiters: 25
+
+====================================================================================================
+RANK #4
+Score: 43.70
+Candidate ID: CAND_0092278
+
+Title: Senior NLP Engineer
+Company: Microsoft
+Experience: 6.8 years
+
+SCORE BREAKDOWN
+--------------------------------------------------
+Semantic      : 108.00
+Career        : 66.00
+Experience    : 0.85
+Behavior      : 0.22
+Availability  : 0.20
+
+SUMMARY
+--------------------------------------------------
+Senior AI engineer with 6.8 years of hands-on experience building production ML systems, with a focus on search, retrieval, and ranking. Most recently, I drove the platform's RAG strategy from prototype to production, including the eval framework, across a corpus of 30M+ candidate profiles. My day-to-day work spans embedding model selection and fine-tuning, hybrid retrieval architecture, learning-to-rank, behavioral-signal integration, and the offline/online evaluation that ties it all together. I've shipped systems in both early-stage product companies and at larger scale, and I've spent enough time on both that I know which tradeoffs apply where. I'm comfortable across the stack from infra to algorithms, but my heart is in retrieval and ranking. Currently exploring my next move — looking for senior IC or tech-lead roles where I can own the intelligence layer end-to-end.
+
+TOP CAREER ENTRIES
+--------------------------------------------------
+
+Job #1
+Company: Microsoft
+Title: Senior NLP Engineer
+Description:
+Built and shipped a production recommendation system at a marketplace product, going from offline experimentation to live A/B test in 5 months. The system combined collaborative filtering (matrix factorization), content-based features (TF-IDF + sentence-transformer embeddings), and a behavioral re-ranking layer. The most interesting technical challenge was the cold-start problem for new users; I designed an exploration-exploitation policy using Thompson sampling that improved new-user retention by 11% in the first month.
+
+Job #2
+Company: Paytm
+Title: Senior NLP Engineer
+Description:
+Built and shipped a production recommendation system at a marketplace product, going from offline experimentation to live A/B test in 5 months. The system combined collaborative filtering (matrix factorization), content-based features (TF-IDF + sentence-transformer embeddings), and a behavioral re-ranking layer. The most interesting technical challenge was the cold-start problem for new users; I designed an exploration-exploitation policy using Thompson sampling that improved new-user retention by 11% in the first month.
+
+TOP SKILLS
+--------------------------------------------------
+TensorFlow (endorsements=60, duration=27m)
+Machine Learning (endorsements=11, duration=61m)
+Hugging Face Transformers (endorsements=6, duration=80m)
+gRPC (endorsements=8, duration=10m)
+QLoRA (endorsements=58, duration=79m)
+pgvector (endorsements=22, duration=73m)
+NLP (endorsements=39, duration=85m)
+Elasticsearch (endorsements=30, duration=43m)
+Vector Search (endorsements=44, duration=45m)
+Milvus (endorsements=35, duration=72m)
+
+REDROB SIGNALS
+--------------------------------------------------
+Open To Work: False
+Github Activity: -1
+Recruiter Response: 0.07
+Interview Completion: 0.78
+Notice Period: 90 days
+Saved By Recruiters: 1
+
+====================================================================================================
+RANK #5
+Score: 42.71
+Candidate ID: CAND_0018499
+
+Title: Senior Machine Learning Engineer
+Company: Zomato
+Experience: 7.2 years
+
+SCORE BREAKDOWN
+--------------------------------------------------
+Semantic      : 118.00
+Career        : 51.00
+Experience    : 1.00
+Behavior      : 0.79
+Availability  : 1.00
+
+SUMMARY
+--------------------------------------------------
+Senior AI engineer with 7.2 years of hands-on experience building production ML systems, with a focus on search, retrieval, and ranking. Most recently, I designed the company's first hybrid retrieval system combining BM25 with dense vector recall, serving 50M+ queries per month. My day-to-day work spans embedding model selection and fine-tuning, hybrid retrieval architecture, learning-to-rank, behavioral-signal integration, and the offline/online evaluation that ties it all together. I've shipped systems in both early-stage product companies and at larger scale, and I've spent enough time on both that I know which tradeoffs apply where. I have strong opinions about when LLMs are the right hammer and when classical IR is — usually it's both. Currently exploring my next move — looking for senior IC or tech-lead roles where I can own the intelligence layer end-to-end.
+
+TOP CAREER ENTRIES
+--------------------------------------------------
+
+Job #1
+Company: Zomato
+Title: Senior Machine Learning Engineer
+Description:
+Built a RAG-based ranking pipeline serving 50M+ queries per month for an internal recruiter-facing search product. The architecture combined BM25 + dense retrieval (BGE embeddings, FAISS HNSW) with an LLM-based re-ranker on the top-50, falling back to a learning-to-rank model when latency budget was tight. Designed the offline evaluation framework from scratch — NDCG, MRR, recall@K calibrated against online A/B engagement metrics. Drove the migration over 4 months including the recruiter-feedback loop that surfaced reranking edge cases.
+
+Job #2
+Company: Google
+Title: Staff Machine Learning Engineer
+Description:
+Built a RAG-based ranking pipeline serving 50M+ queries per month for an internal recruiter-facing search product. The architecture combined BM25 + dense retrieval (BGE embeddings, FAISS HNSW) with an LLM-based re-ranker on the top-50, falling back to a learning-to-rank model when latency budget was tight. Designed the offline evaluation framework from scratch — NDCG, MRR, recall@K calibrated against online A/B engagement metrics. Drove the migration over 4 months including the recruiter-feedback loop that surfaced reranking edge cases.
+
+TOP SKILLS
+--------------------------------------------------
+Deep Learning (endorsements=46, duration=53m)
+Weaviate (endorsements=6, duration=88m)
+Recommendation Systems (endorsements=52, duration=46m)
+scikit-learn (endorsements=58, duration=93m)
+Diffusion Models (endorsements=49, duration=60m)
+Pinecone (endorsements=31, duration=54m)
+Information Retrieval (endorsements=49, duration=27m)
+Milvus (endorsements=18, duration=40m)
+QLoRA (endorsements=34, duration=43m)
+RAG (endorsements=1, duration=94m)
+
+REDROB SIGNALS
+--------------------------------------------------
+Open To Work: True
+Github Activity: 94.8
+Recruiter Response: 0.61
+Interview Completion: 0.8
+Notice Period: 15 days
+Saved By Recruiters: 16

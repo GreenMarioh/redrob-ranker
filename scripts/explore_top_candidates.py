@@ -1,15 +1,17 @@
 import sys
+
+sys.stdout.reconfigure(encoding="utf-8")
 from pathlib import Path
 
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 
 from parsing.loader import load_candidates_jsonl
 from features.scorer import total_score
+from ranking.explanations import explain_candidate
 
 
 candidates = load_candidates_jsonl(
     "data/raw/candidates.jsonl",
-    limit=1000,
 )
 
 ranked = []
@@ -40,6 +42,17 @@ for rank, (score, candidate) in enumerate(ranked[:5], start=1):
     print(f"\nTitle: {candidate.profile.current_title}")
     print(f"Company: {candidate.profile.current_company}")
     print(f"Experience: {candidate.profile.years_of_experience} years")
+
+    explanation = explain_candidate(candidate)
+
+    print("\nSCORE BREAKDOWN")
+    print("-" * 50)
+
+    print(f"Semantic      : {explanation['semantic']:.2f}")
+    print(f"Career        : {explanation['career']:.2f}")
+    print(f"Experience    : {explanation['experience']:.2f}")
+    print(f"Behavior      : {explanation['behavior']:.2f}")
+    print(f"Availability  : {explanation['availability']:.2f}")
 
     print("\nSUMMARY")
     print("-" * 50)
