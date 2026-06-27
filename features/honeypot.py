@@ -1,4 +1,5 @@
 from parsing.schema import Candidate
+from features.synonyms import expand_keyword_set, NEW_EXPERT_SKILL_KEYWORDS
 
 
 # Titles that are definitively non-technical roles
@@ -36,7 +37,7 @@ NON_TECH_TITLES = {
 }
 
 # Skills that suggest genuine hands-on AI/ML expertise
-EXPERT_SKILL_KEYWORDS = {
+EXPERT_SKILL_KEYWORDS = expand_keyword_set({
     "retrieval",
     "ranking",
     "recommendation",
@@ -58,7 +59,7 @@ EXPERT_SKILL_KEYWORDS = {
     "kubeflow",
     "spark",
     "kafka",
-}
+}) | NEW_EXPERT_SKILL_KEYWORDS
 
 # Proficiency levels that claim high expertise
 HIGH_PROFICIENCY_LEVELS = {"expert", "advanced"}
