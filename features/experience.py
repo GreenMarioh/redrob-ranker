@@ -1,6 +1,11 @@
 from parsing.schema import Candidate
+from features.synonyms import (
+    expand_keyword_set,
+    NEW_AI_KEYWORDS,
+    NEW_RETRIEVAL_KEYWORDS,
+)
 
-AI_KEYWORDS = {
+AI_KEYWORDS = expand_keyword_set({
     "ai",
     "ml",
     "machine learning",
@@ -12,7 +17,7 @@ AI_KEYWORDS = {
     "retrieval",
     "ranking",
     "recommendation",
-}
+}) | NEW_AI_KEYWORDS
 
 NON_TECH_KEYWORDS = {
     "marketing",
@@ -25,7 +30,7 @@ NON_TECH_KEYWORDS = {
     "recruiter",
 }
 
-RETRIEVAL_KEYWORDS = {
+RETRIEVAL_KEYWORDS = expand_keyword_set({
     "retrieval",
     "search",
     "ranking",
@@ -41,7 +46,7 @@ RETRIEVAL_KEYWORDS = {
     "qdrant",
     "milvus",
     "bm25",
-}
+}) | NEW_RETRIEVAL_KEYWORDS
 
 def experience_score(candidate: Candidate) -> float:
     score = 0.0

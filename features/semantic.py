@@ -1,7 +1,8 @@
 from parsing.schema import Candidate
+from features.synonyms import expand_keyword_dict, NEW_KEYWORD_CATEGORIES
 
 
-KEYWORDS = {
+_BASE_KEYWORDS = {
     # Retrieval / Ranking
     "retrieval": 8,
     "ranking": 8,
@@ -30,6 +31,10 @@ KEYWORDS = {
     "spark": 3,
     "kafka": 3,
 }
+
+# Expand with synonyms and merge new keyword categories
+KEYWORDS = expand_keyword_dict(_BASE_KEYWORDS)
+KEYWORDS.update({k: v for k, v in NEW_KEYWORD_CATEGORIES.items() if k not in KEYWORDS})
 
 NEGATIVE_TITLES = {
     "graphic designer",
