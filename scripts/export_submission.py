@@ -18,23 +18,32 @@ ranked = rank_candidates(candidates)
 
 from features.semantic import KEYWORDS
 
+# Collect raw scores for normalization
+raw_scores = [score for score, _ in ranked]
+min_score = min(raw_scores)
+max_score = max(raw_scores)
+score_range = max_score - min_score
+
 rows = []
 for rank, (score, candidate) in enumerate(ranked, start=1):
     explanation = explain_candidate(candidate)
-    
+
     # Calculate AI core skills by matching candidate skills with our known keywords
     ai_skills_count = sum(1 for s in candidate.skills if s.name.lower() in KEYWORDS)
-    
+
     title = candidate.profile.current_title
     years = candidate.profile.years_of_experience
     resp_rate = candidate.redrob_signals.recruiter_response_rate
-    
+
     reasoning = f"{title} with {years:.1f} yrs; {ai_skills_count} AI core skills; response rate {resp_rate:.2f}."
+
+    # Normalize score to [0, 1] using min-max normalization
+    normalized_score = (score - min_score) / score_range if score_range > 0 else 1.0
 
     rows.append({
         "candidate_id": candidate.candidate_id,
         "rank": rank,
-        "score": round(score, 4),
+        "score": round(normalized_score, 4),
         "reasoning": reasoning
     })
 
