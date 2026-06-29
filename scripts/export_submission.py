@@ -16,22 +16,35 @@ print(f"Loaded {len(candidates)} candidates")
 print("Ranking candidates...")
 ranked = rank_candidates(candidates)
 
+from features.semantic import KEYWORDS
+
+# Collect raw scores for normalization
+raw_scores = [score for score, _ in ranked]
+min_score = min(raw_scores)
+max_score = max(raw_scores)
+score_range = max_score - min_score
+
 rows = []
 for rank, (score, candidate) in enumerate(ranked, start=1):
     explanation = explain_candidate(candidate)
 
+    # Calculate AI core skills by matching candidate skills with our known keywords
+    ai_skills_count = sum(1 for s in candidate.skills if s.name.lower() in KEYWORDS)
+
+    title = candidate.profile.current_title
+    years = candidate.profile.years_of_experience
+    resp_rate = candidate.redrob_signals.recruiter_response_rate
+
+    reasoning = f"{title} with {years:.1f} yrs; {ai_skills_count} AI core skills; response rate {resp_rate:.2f}."
+
+    # Normalize score to [0, 1] using min-max normalization
+    normalized_score = (score - min_score) / score_range if score_range > 0 else 1.0
+
     rows.append({
-        "rank": rank,
         "candidate_id": candidate.candidate_id,
-        "score": round(score, 4),
-        "current_title": candidate.profile.current_title,
-        "current_company": candidate.profile.current_company,
-        "years_of_experience": candidate.profile.years_of_experience,
-        "semantic_score": round(explanation["semantic"], 4),
-        "career_score": round(explanation["career"], 4),
-        "experience_score": round(explanation["experience"], 4),
-        "behavior_score": round(explanation["behavior"], 4),
-        "availability_score": round(explanation["availability"], 4),
+        "rank": rank,
+        "score": round(normalized_score, 4),
+        "reasoning": reasoning
     })
 
 df = pd.DataFrame(rows)
@@ -49,4 +62,4 @@ print(f"CSV saved to: {csv_path}")
 print(f"XLSX saved to: {xlsx_path}")
 
 print("\nTop 10 Preview\n")
-print(df[["rank", "candidate_id", "current_title", "score"]].head(10))
+print(df.head(10))
