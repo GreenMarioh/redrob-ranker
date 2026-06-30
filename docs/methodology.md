@@ -40,6 +40,8 @@ The system processes all candidate profiles, extracts structured signals, comput
 
 The semantic relevance component measures how strongly a candidate's profile aligns with AI and Machine Learning domains.
 
+All keyword sets are expanded through a centralized synonym registry (`features/synonyms.py`) that maps canonical terms to their domain-equivalent variations (e.g., "retrieval" expands to include "information retrieval", "dense retrieval", "sparse retrieval"). This expansion is applied across all feature modules to improve recall without sacrificing precision.
+
 Signals include:
 
 - Retrieval Systems
@@ -157,20 +159,40 @@ Candidates who are easier to engage and onboard receive higher availability scor
 
 ---
 
+# Feature 6: Profile Consistency / Honeypot Detection
+
+The honeypot module detects profile inconsistencies that suggest fabricated or inflated candidate profiles.
+
+Consistency checks include:
+
+- Non-technical title (e.g., "Marketing Manager") claiming expert-level AI/ML skills
+- Skill proficiency marked as "Expert" or "Advanced" with less than 3 months of listed duration
+- AI/ML-related title but zero technical evidence in career history descriptions
+- Total career months significantly exceeding stated years of experience (timeline fabrication)
+- Summary densely packed with AI keywords but career descriptions containing no relevant content (keyword stuffing)
+
+Each detected flag reduces a consistency multiplier by 0.15. The multiplier starts at 1.0 and is capped at a minimum of 0.0.
+
+This penalty is applied multiplicatively on the final score, ensuring that candidates with major inconsistencies are ranked lower regardless of their keyword density.
+
+---
+
 # Score Aggregation
 
-The final ranking score is generated through a weighted combination of all feature scores.
+The final ranking score is generated through a weighted combination of all feature scores, multiplied by the honeypot consistency penalty.
 
 ```
-Final Score =
-    Semantic Relevance
-  + Career Relevance
-  + Experience Fit
-  + Behavioral Signals
-  + Availability Signals
+raw_score =
+    0.25 × Semantic Relevance
+  + 0.25 × Career Relevance
+  + 0.20 × Behavioral Signals
+  + 0.15 × Experience Fit
+  + 0.15 × Availability Signals
+
+final_score = raw_score × Honeypot Multiplier
 ```
 
-The weighting strategy prioritizes technical relevance while still considering candidate engagement and hiring feasibility.
+The weighting strategy prioritizes technical relevance (semantic + career = 50%) while incorporating recruiter engagement and hiring feasibility. The honeypot multiplier ensures that inconsistent profiles are penalized regardless of keyword density.
 
 ---
 
