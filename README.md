@@ -29,9 +29,11 @@ Our goal was to build an explainable ranking system that combines technical rele
 
 The system evaluates candidates using five independent signals:
 
-### 1. Semantic Relevance
+### 1. Semantic Relevance (Weight: 25%)
 
 Measures AI/ML relevance using profile summaries, skills, and job descriptions.
+
+All keyword sets are expanded through a curated synonym registry that maps domain-equivalent terms (e.g., "retrieval" expands to include "information retrieval", "dense retrieval", "sparse retrieval").
 
 Examples:
 
@@ -44,7 +46,7 @@ Examples:
 
 ---
 
-### 2. Career Relevance
+### 2. Career Relevance (Weight: 25%)
 
 Measures actual work experience rather than self-declared interests.
 
@@ -58,7 +60,7 @@ Examples:
 
 ---
 
-### 3. Experience Fit
+### 3. Experience Fit (Weight: 15%)
 
 Measures alignment between candidate seniority and target role requirements.
 
@@ -70,7 +72,7 @@ Factors include:
 
 ---
 
-### 4. Behavioral Signals
+### 4. Behavioral Signals (Weight: 20%)
 
 Measures recruiter engagement and candidate responsiveness.
 
@@ -83,7 +85,7 @@ Examples:
 
 ---
 
-### 5. Availability Signals
+### 5. Availability Signals (Weight: 15%)
 
 Measures hiring readiness.
 
@@ -93,6 +95,34 @@ Examples:
 - Notice period
 - Relocation willingness
 - Work mode preferences
+
+---
+
+### 6. Profile Consistency / Honeypot Detection (Multiplier)
+
+Detects profile inconsistencies and applies a penalty multiplier on the final score.
+
+Checks include:
+
+- Non-technical title claiming expert-level AI/ML skills
+- Expert proficiency with near-zero listed duration
+- AI/ML title but no technical evidence in career history
+- Impossible experience timelines
+- Keyword stuffing (summary packed with buzzwords, career history empty)
+
+Candidates with multiple inconsistencies can have their score reduced to zero.
+
+---
+
+### Score Aggregation
+
+The final score is computed as:
+
+```text
+Final Score = (0.25 × Semantic + 0.25 × Career + 0.20 × Behavior + 0.15 × Experience + 0.15 × Availability) × Honeypot Multiplier
+```
+
+The honeypot multiplier ranges from 1.0 (no penalty) to 0.0 (maximum penalty), with each detected inconsistency reducing it by 0.15.
 
 ---
 
@@ -132,34 +162,53 @@ Examples:
 
 ```text
 redrob-ranker/
-
+│
 ├── data/
+│   └── raw/                          # Raw candidate JSONL dataset
 │
 ├── parsing/
-│   ├── schema.py
-│   └── loader.py
+│   ├── schema.py                     # Candidate dataclasses
+│   └── loader.py                     # JSONL/JSON data loading
 │
 ├── features/
-│   ├── semantic.py
-│   ├── career_relevance.py
-│   ├── experience.py
-│   ├── behavior.py
-│   ├── availability.py
-│   └── scorer.py
+│   ├── semantic.py                   # Semantic keyword relevance scoring
+│   ├── career_relevance.py           # Career history evidence scoring
+│   ├── experience.py                 # Experience fit scoring
+│   ├── behavior.py                   # Behavioral signal scoring
+│   ├── availability.py               # Availability signal scoring
+│   ├── honeypot.py                   # Profile consistency / honeypot detection
+│   ├── synonyms.py                   # Centralized synonym expansion registry
+│   └── scorer.py                     # Weighted score aggregation
 │
 ├── ranking/
-│   ├── rank.py
-│   ├── explanations.py
-│   └── exporter.py
+│   ├── rank.py                       # Candidate ranking engine
+│   ├── explanations.py               # Per-candidate score explanations
+│   └── exporter.py                   # DataFrame export utility
 │
 ├── scripts/
-│   ├── explore_top_candidates.py
-│   ├── rank_10000.py
-│   └── export_submission.py
+│   ├── export_submission.py          # Main pipeline — generates submission files
+│   ├── rank_10000.py                 # Quick ranking on first 10K candidates
+│   ├── explore_top_candidates.py     # Detailed view of top 5 candidates
+│   └── explore_bottom_candidates.py  # Detailed view of bottom 5 candidates
 │
-├── outputs/
+├── tests/
+│   ├── test_loader.py
+│   ├── test_experience.py
+│   ├── test_honeypot.py
+│   └── debug_semantic.py
 │
-└── docs/
+├── notebooks/
+│   ├── schema_exploration.ipynb
+│   └── audit_top_candidates.ipynb
+│
+├── outputs/                          # Generated ranked CSV/XLSX files
+├── customOutput/                     # Debug and analysis outputs
+├── docs/                             # Architecture, methodology, results docs
+│
+├── requirements.txt
+├── submission_metadata.yaml
+├── app.py                            # Streamlit Web Dashboard
+└── README.md
 ```
 
 ---
@@ -193,7 +242,7 @@ The final rankings consistently surfaced highly relevant AI and Machine Learning
 ### Install Dependencies
 
 ```bash
-pip install pandas openpyxl
+pip install -r requirements.txt
 ```
 
 ### Generate Submission Files
@@ -209,6 +258,12 @@ outputs/
 ├── ranked_candidates.csv
 └── ranked_candidates.xlsx
 ```
+
+### Live Sandbox Deployment
+
+You can explore the ranked candidates and their detailed scoring breakdown visually via our deployed Streamlit application:
+
+🔗 **[Live Demo: Redrob Ranker Sandbox](https://redrobranker.streamlit.app/)**
 
 ---
 
@@ -244,13 +299,10 @@ The architecture successfully scales to datasets containing 100,000+ candidate p
 ## Submission Artifacts
 
 - GitHub Repository
+- Interactive Streamlit Dashboard (`app.py`)
 - Ranked Candidate CSV
 - Ranked Candidate XLSX
 - Methodology Documentation
 - Architecture Documentation
 - Results Documentation
 - Presentation Deck (PDF)
-
-```
-
-```

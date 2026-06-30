@@ -1,4 +1,4 @@
-# Ranking Strategy v1
+# Ranking Strategy
 
 ## Objective
 
@@ -185,9 +185,9 @@ Expected to contribute little to candidate quality assessment.
 
 ---
 
-# Planned Ranking Components
+# Implemented Ranking Components
 
-## 1. Semantic Fit Score
+## 1. Semantic Fit Score (Weight: 25%)
 
 Measures alignment between:
 
@@ -203,60 +203,48 @@ Primary focus:
 - recommendation systems
 - production AI
 
----
+All keyword sets are expanded through a centralized synonym registry (`features/synonyms.py`) that maps canonical terms to domain-equivalent variations (e.g., "retrieval" → "information retrieval", "dense retrieval", "sparse retrieval"). This expansion is applied across all feature modules.
 
-## 2. Experience Fit Score
-
-Measures:
-
-- years of experience
-- seniority
-- role progression
-
-Target range:
-
-- 5 to 9 years
-
-Based on JD preference.
+Non-technical titles (e.g., "Graphic Designer", "Accountant") receive a negative penalty.
 
 ---
 
-## 3. Product Engineering Score
+## 2. Career Relevance Score (Weight: 25%)
 
-Rewards candidates with evidence of:
+Measures actual work evidence from career history descriptions rather than self-declared interests.
 
-- shipping systems
-- ownership
-- production deployments
-- product-company experience
+Tiered keyword matching:
 
-Penalizes purely managerial profiles.
+- High-value terms (×5): ranking, retrieval, recommendation, re-ranking, embedding
+- Medium-value terms (×2): machine learning, xgboost, lightgbm, pytorch, tensorflow, nlp
+- Data terms (×1): spark, kafka, airflow, data pipeline
 
----
-
-## 4. Retrieval / Ranking Score
-
-Rewards evidence of:
-
-- search systems
-- retrieval systems
-- recommendation engines
-- vector search
-- information retrieval
-
-Expected to be one of the strongest positive signals.
+All term sets are expanded via the synonym registry.
 
 ---
 
-## 5. Behavioral Score
+## 3. Experience Fit Score (Weight: 15%)
+
+A composite score combining three sub-signals:
+
+- **Years of experience band** (40%): Sweet spot is 5–9 years (score 1.0). 3–5 or 9–12 years score 0.7. Outside that scores 0.3.
+- **Title relevance** (30%): Non-technical titles score 0.0. AI/ML-related titles score 1.0. Others score 0.5.
+- **Retrieval experience depth** (30%): Counts retrieval/search/ranking/vector keywords across career history. Normalized to [0, 1] with cap at 5 hits.
+
+Based on JD preference for the 5–9 year range.
+
+---
+
+## 4. Behavioral Score (Weight: 20%)
 
 Derived from:
 
 - recruiter response rate
-- activity recency
 - interview completion rate
-- recruiter saves
-- GitHub activity
+- GitHub activity score (normalized, capped at 100)
+- recruiter saves in last 30 days (normalized, capped at 20)
+
+All four signals are averaged to produce a [0, 1] score.
 
 Purpose:
 
@@ -264,30 +252,42 @@ Estimate real-world hireability.
 
 ---
 
-## 6. Availability Score
+## 5. Availability Score (Weight: 15%)
 
 Derived from:
 
-- notice period
-- open-to-work status
-- relocation preference
+- open-to-work flag (+0.4)
+- notice period (≤30d: +0.3, ≤60d: +0.2, ≤90d: +0.1)
+- relocation willingness (+0.2)
+- work mode flexibility (+0.1 if not onsite-only)
 
-Shorter notice periods receive higher scores.
+Shorter notice periods and higher flexibility receive higher scores. Capped at 1.0.
 
 ---
 
-## 7. Consistency / Honeypot Score
+## 6. Consistency / Honeypot Score (Multiplier)
 
-Detects profile inconsistencies.
+Detects profile inconsistencies and applies a penalty multiplier (each flag reduces by 0.15, minimum 0.0).
 
-Examples:
+Checks:
 
-- Marketing Manager with advanced AI skills
-- Expert skills with near-zero duration
-- Career descriptions contradicting titles
-- Impossible experience timelines
+- Non-technical title claiming expert-level AI/ML skills
+- Expert/Advanced proficiency with less than 3 months duration
+- AI/ML title but no technical evidence in career history
+- Impossible experience timelines (career months > 125% of stated years)
+- Keyword stuffing (≥4 AI keywords in summary, 0 in career descriptions)
 
-Candidates with major inconsistencies receive penalties.
+Candidates with major inconsistencies can have their score reduced to zero.
+
+---
+
+## Score Aggregation
+
+```text
+raw_score = 0.25 × Semantic + 0.25 × Career + 0.20 × Behavior + 0.15 × Experience + 0.15 × Availability
+
+final_score = raw_score × Honeypot Multiplier
+```
 
 ---
 

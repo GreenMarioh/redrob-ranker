@@ -27,15 +27,18 @@ The system successfully:
 
 # Ranking Features Used
 
-The final ranking score incorporates five independent signals:
+The final ranking score incorporates six independent signals:
 
 1. Semantic Relevance
 2. Career Relevance
 3. Experience Fit
 4. Behavioral Signals
 5. Availability Signals
+6. Profile Consistency (Honeypot Detection)
 
-This allows the ranking system to evaluate both technical suitability and practical hiring readiness.
+The first five signals are combined via a weighted sum, then multiplied by a honeypot consistency penalty to detect and penalize fabricated or inflated profiles.
+
+This allows the ranking system to evaluate both technical suitability and practical hiring readiness while filtering out inconsistent profiles.
 
 ---
 
@@ -132,9 +135,16 @@ Career Score        : 39
 Experience Score    : 1.00
 Behavior Score      : 0.62
 Availability Score  : 0.90
+Honeypot Multiplier : 1.00 (no inconsistencies detected)
 ```
 
-This transparency allows recruiters and evaluators to understand why a candidate was ranked highly.
+A candidate with detected inconsistencies would show a reduced multiplier:
+
+```text
+Honeypot Multiplier : 0.70 (2 inconsistency flags detected)
+```
+
+This transparency allows recruiters and evaluators to understand why a candidate was ranked highly or penalized.
 
 ---
 
@@ -158,6 +168,8 @@ Both files contain ranked candidate information and can be directly consumed by 
 - Generated a complete ranked candidate leaderboard
 - Prioritized AI/ML-relevant candidates
 - Incorporated recruiter-centric behavioral signals
+- Implemented honeypot detection to penalize fabricated or inconsistent profiles
+- Expanded keyword coverage through curated synonym registry
 - Produced explainable ranking outputs
 - Generated submission-ready CSV and XLSX files
 

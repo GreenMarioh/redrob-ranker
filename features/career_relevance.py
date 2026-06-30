@@ -50,4 +50,5 @@ def career_relevance_score(candidate: Candidate) -> float:
         for term in DATA_TERMS:
             score += text.count(term)
 
-    return score
+    # Normalize to [0.0, 1.0] based on an expected max of 50 points
+    return min(max(score / 50.0, 0.0), 1.0)
