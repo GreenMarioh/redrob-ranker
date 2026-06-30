@@ -31,10 +31,9 @@ github_repo: "https://https://github.com/GreenMarioh/redrob-ranker"
 # Required. Must be reachable. Private repos OK if you can grant organizer
 # access at Stage 3 (the email to add will be communicated then).
 
-sandbox_link: "https://huggingface.co/spaces/YOUR_USERNAME/redrob-ranker"
-# Required. A working hosted environment where the ranker can be run on a small
-# candidate sample. See Section 10.5 of submission_spec.md for acceptable
-# platforms (HuggingFace Spaces, Streamlit Cloud, Replit, Colab, Docker, Binder).
+sandbox_link: "https://YOUR_USERNAME-redrob-ranker.streamlit.app"
+# Required. Streamlit Cloud deployment. Deploy via https://share.streamlit.io
+# by connecting your GitHub repo and setting app.py as the main file.
 
 reproduce_command: "python scripts/export_submission.py"
 # The single command that produces ranked_candidates.csv and ranked_candidates.xlsx
