@@ -64,7 +64,9 @@ def main():
     score_range = max_score - min_score
     
     rows = []
-    for rank, res in enumerate(results, start=1):
+    TOP_K = 100
+    
+    for rank, res in enumerate(results[:TOP_K], start=1):
         score = res["score"]
         # Normalize score to [0, 1] using min-max normalization
         normalized_score = (score - min_score) / score_range if score_range > 0 else 1.0
