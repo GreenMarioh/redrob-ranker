@@ -17,15 +17,17 @@ primary_contact:
 team_members:
   - name: "Mohnish Kumar"
     email: "mohnishkumar360@gmail.com"
-    role: "Team Lead" # Optional, e.g. "Team Lead", "Backend", "Data"
+  - name: "Devesh Jaiswal"
+    email: "deveshjaiswal278@gmail.com"
+  - name: "Amrit Raj"
+    email: "amritiano95@gmail.com"
   - name: "Pavitra Rajpoot"
     email: "pavitrarajpoot64@gmail.com"
-  # Add more members as needed; solo participants list just one member
 
 # ============================================================================
 # Code and reproducibility
 # ============================================================================
-github_repo: "https://github.com/YOUR_USERNAME/YOUR_REPO"
+github_repo: "https://https://github.com/GreenMarioh/redrob-ranker"
 # Required. Must be reachable. Private repos OK if you can grant organizer
 # access at Stage 3 (the email to add will be communicated then).
 
@@ -34,9 +36,9 @@ sandbox_link: "https://huggingface.co/spaces/YOUR_USERNAME/redrob-ranker"
 # candidate sample. See Section 10.5 of submission_spec.md for acceptable
 # platforms (HuggingFace Spaces, Streamlit Cloud, Replit, Colab, Docker, Binder).
 
-reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
-# The single command that produces submission.csv from candidates.jsonl.
-# Should run end-to-end within 5 minutes on CPU with 16GB RAM and no network.
+reproduce_command: "python scripts/export_submission.py"
+# The single command that produces ranked_candidates.csv and ranked_candidates.xlsx
+# from data/raw/candidates.jsonl. Runs end-to-end within 5 minutes on CPU with 16GB RAM and no network.
 
 # ============================================================================
 # Compute environment
@@ -59,30 +61,31 @@ compute:
 # may verify these declarations against your code; declarations that contradict
 # your code or your interview are flagged.
 ai_tools_used:
-  - "Claude" # e.g. for architecture discussion, code review
-  - "GitHub Copilot" # e.g. for autocomplete
-  # Other options: "ChatGPT", "Cursor", "Gemini", "Codeium", "Other", "None"
+  - "Claude"
+  - "GitHub Copilot"
 
 ai_usage_summary: |
-  Briefly describe how AI tools were used. Examples:
-  - "Used Claude for code review and architectural discussion. Used Copilot for autocomplete.
-     No candidate data was fed to any LLM."
-  - "Used ChatGPT to debug Python issues and Cursor for refactoring."
-  - "No AI tools used."
+  Used Claude for architecture discussion, code review, and debugging ranking logic.
+  Used GitHub Copilot for autocomplete during development.
+  No candidate data was fed to any LLM. All ranking is performed offline
+  using rule-based scoring with no external API calls.
 
 # ============================================================================
 # Approach summary (optional but recommended)
 # ============================================================================
 methodology_summary: |
-  ≤200 word summary of your approach. Strongly recommended.
-
-  Example:
-  "Rule-based ranker with explicit reasoning capture. Five scoring components
-  (skills, title+career, experience years, location, education) combined with
-  a multiplicative behavioral-signal modifier. The title component is the
-  decisive signal against keyword-stuffer traps; an endorsement-and-duration
-  trust multiplier on skills catches lazy keyword stuffing. Runtime is ~10
-  seconds for 50K candidates on CPU."
+  Rule-based candidate ranker with explainable multi-signal scoring. Six scoring
+  components — semantic relevance (weighted keyword matching with synonym expansion),
+  career relevance (tiered evidence from job descriptions), experience fit
+  (years + title + retrieval depth), behavioral signals (recruiter response rate,
+  interview completion, GitHub activity, recruiter saves), and availability signals
+  (open-to-work, notice period, relocation, work mode) — combined via a weighted
+  sum (0.25 semantic + 0.25 career + 0.20 behavior + 0.15 experience + 0.15
+  availability). A honeypot consistency multiplier penalizes fabricated profiles
+  by detecting non-tech titles with expert AI skills, zero-duration expert claims,
+  title-career mismatches, impossible experience timelines, and keyword stuffing.
+  A curated synonym registry expands all keyword sets with domain-equivalent terms.
+  Runtime is under 3 minutes for 100K candidates on CPU with no network access.
 
 # ============================================================================
 # Declarations
@@ -91,5 +94,5 @@ declarations:
   read_submission_spec: true # I have read submission_spec.md in full
   code_is_original_work: true # My code is my team's original work (using AI as a tool is fine)
   no_collusion: true # I have not coordinated my submission with other teams
-  honeypot_check_done: false # OPTIONAL — set true if you explicitly checked for honeypots in your ranking
+  honeypot_check_done: true # Honeypot detection implemented in features/honeypot.py with 5 consistency checks
   reproduction_tested: true # I have tested that my reproduce_command runs end-to-end

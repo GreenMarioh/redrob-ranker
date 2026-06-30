@@ -228,6 +228,55 @@ availability_score
 
 ---
 
+### Honeypot / Consistency Module
+
+```text
+features/honeypot.py
+```
+
+Detects profile inconsistencies and returns a penalty multiplier.
+
+Checks:
+
+- Non-technical title with expert-level AI/ML skills
+- Expert proficiency with near-zero duration
+- AI/ML title but no technical evidence in career history
+- Impossible experience timelines
+- Keyword stuffing (summary packed with buzzwords, career history empty)
+
+Output:
+
+```text
+honeypot_penalty (multiplier: 0.0 to 1.0)
+```
+
+Each detected flag reduces the multiplier by 0.15.
+
+---
+
+### Synonym Expansion Module
+
+```text
+features/synonyms.py
+```
+
+Centralized technical synonym registry used by all feature modules.
+
+Responsibilities:
+
+- Map canonical keywords to domain-equivalent terms
+- Expand keyword sets and weighted keyword dicts
+- Provide new keyword categories for additional coverage
+
+Example:
+
+```text
+"retrieval" → {"retrieval", "information retrieval", "dense retrieval", "sparse retrieval"}
+"faiss" → {"faiss", "annoy", "scann", "hnsw", "approximate nearest neighbor"}
+```
+
+---
+
 # Scoring Engine
 
 ### File
@@ -236,7 +285,19 @@ availability_score
 features/scorer.py
 ```
 
-The scoring engine combines all extracted signals into a single ranking score.
+The scoring engine combines all extracted signals into a single ranking score using a weighted sum, then applies the honeypot consistency multiplier.
+
+Formula:
+
+```text
+raw_score = 0.25 × semantic
+          + 0.25 × career_relevance
+          + 0.20 × behavior
+          + 0.15 × experience
+          + 0.15 × availability
+
+final_score = raw_score × honeypot_penalty
+```
 
 Inputs:
 
@@ -246,6 +307,7 @@ career_relevance_score
 experience_score
 behavior_score
 availability_score
+honeypot_penalty
 ```
 
 Output:
@@ -254,7 +316,7 @@ Output:
 total_score
 ```
 
-The weighting strategy prioritizes technical relevance while preserving practical recruiting considerations.
+The weighting strategy prioritizes technical relevance (semantic + career = 50%) while preserving practical recruiting considerations (behavior + availability = 35%). The honeypot multiplier ensures inconsistent profiles are penalized regardless of keyword density.
 
 ---
 
@@ -340,8 +402,9 @@ outputs/ranked_candidates.xlsx
 
 ```text
 redrob-ranker/
-
+│
 ├── data/
+│   └── raw/
 │
 ├── parsing/
 │   ├── schema.py
@@ -353,6 +416,8 @@ redrob-ranker/
 │   ├── experience.py
 │   ├── behavior.py
 │   ├── availability.py
+│   ├── honeypot.py
+│   ├── synonyms.py
 │   └── scorer.py
 │
 ├── ranking/
@@ -361,10 +426,18 @@ redrob-ranker/
 │   └── exporter.py
 │
 ├── scripts/
+│   ├── export_submission.py
 │   ├── rank_10000.py
-│   └── export_submission.py
+│   ├── explore_top_candidates.py
+│   └── explore_bottom_candidates.py
+│
+├── tests/
+│
+├── notebooks/
 │
 ├── outputs/
+│
+├── customOutput/
 │
 └── docs/
 ```
