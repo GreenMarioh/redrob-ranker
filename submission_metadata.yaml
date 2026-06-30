@@ -37,17 +37,17 @@ sandbox_link: "https://redrobranker.streamlit.app/"
 
 reproduce_command: "python scripts/export_submission.py"
 # The single command that produces ranked_candidates.csv and ranked_candidates.xlsx
-# from data/raw/candidates.jsonl. Runs end-to-end within 5 minutes on CPU with 16GB RAM and no network.
+# from data/raw/candidates.jsonl. Runs end-to-end within 15 seconds on CPU with 16GB RAM and no network.
 
 # ============================================================================
 # Compute environment
 # ============================================================================
 compute:
-  platform: "Windows 11" # Or: "AWS EC2 c5.4xlarge", "Local Linux box", etc.
-  cpu_cores: 8 # Number of CPU cores used
+  platform: "Arch Linux" # Or: "Windows 11", "Linux box", etc.
+  cpu_cores: 12 # Number of CPU cores used
   ram_gb: 16 # Available RAM in GB
-  python_version: "3.12.10" # python --version
-  os: "Windows 11" # Or "Ubuntu 22.04 LTS", etc.
+  python_version: "3.14.6" # python --version
+  os: "Arch Linux" # Or "Ubuntu 22.04 LTS", etc.
   uses_gpu_for_inference: false # Must be false — see compute constraints
   has_network_during_ranking: false # Must be false — no API calls during ranking
   pre_computation_required: false # true if you pre-compute embeddings or train models offline
@@ -81,7 +81,7 @@ methodology_summary: |
   by detecting non-tech titles with expert AI skills, zero-duration expert claims,
   title-career mismatches, impossible experience timelines, and keyword stuffing.
   A curated synonym registry expands all keyword sets with domain-equivalent terms.
-  Runtime is under 3 minutes for 100K candidates on CPU with no network access.
+  Runtime is under 15 seconds for 100K candidates on CPU with no network access.
 
 # ============================================================================
 # Declarations
