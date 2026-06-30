@@ -43,7 +43,7 @@ reproduce_command: "python scripts/export_submission.py"
 # Compute environment
 # ============================================================================
 compute:
-  platform: "Local Linux box" # Or: "AWS EC2 c5.4xlarge", "Local Linux box", etc.
+  platform: "Arch Linux" # Or: "Windows 11", "Linux box", etc.
   cpu_cores: 12 # Number of CPU cores used
   ram_gb: 16 # Available RAM in GB
   python_version: "3.14.6" # python --version
