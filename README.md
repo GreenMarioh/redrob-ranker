@@ -306,7 +306,3 @@ The architecture successfully scales to datasets containing 100,000+ candidate p
 - Architecture Documentation
 - Results Documentation
 - Presentation Deck (PDF)
-
-```
-
-```

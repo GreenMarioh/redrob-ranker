@@ -126,10 +126,14 @@ st.markdown("""
 def load_jsonl_from_upload(uploaded_file):
     candidates = []
     content = uploaded_file.getvalue().decode("utf-8")
-    for line in content.strip().split("\n"):
+    for idx, line in enumerate(content.strip().split("\n")):
         if not line.strip():
             continue
-        candidates.append(parse_candidate(json.loads(line)))
+        try:
+            candidates.append(parse_candidate(json.loads(line)))
+        except json.JSONDecodeError:
+            st.error(f"Error parsing uploaded file at line {idx+1}. Please make sure you are uploading a valid JSONL (JSON Lines) file, not a normal JSON or CSV file.")
+            st.stop()
     return candidates
 
 
@@ -221,7 +225,7 @@ with st.sidebar:
 
     run = st.button(
         "Run Pipeline",
-        use_container_width=True,
+        width='stretch',
         type="primary",
         disabled=(not uploaded_file and not has_default),
     )
@@ -351,7 +355,7 @@ if run or "results_df" in st.session_state:
             with cand_tabs[0]:
                 col_left, col_right = st.columns([1, 1])
                 with col_left:
-                    st.plotly_chart(radar_chart(row), use_container_width=True)
+                    st.plotly_chart(radar_chart(row), width='stretch')
                 with col_right:
                     st.markdown("<br>", unsafe_allow_html=True)
                     st.dataframe(
@@ -428,7 +432,7 @@ if run or "results_df" in st.session_state:
                 export_df.to_csv(index=False),
                 "ranked_candidates.csv",
                 "text/csv",
-                use_container_width=True,
+                width='stretch',
             )
         with c2:
             buf = io.BytesIO()
@@ -438,7 +442,7 @@ if run or "results_df" in st.session_state:
                 buf.getvalue(),
                 "ranked_candidates.xlsx",
                 "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                use_container_width=True,
+                width='stretch',
             )
 
 else:
