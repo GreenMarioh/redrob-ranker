@@ -207,6 +207,7 @@ redrob-ranker/
 │
 ├── requirements.txt
 ├── submission_metadata.yaml
+├── app.py                            # Streamlit Web Dashboard
 └── README.md
 ```
 
@@ -258,6 +259,12 @@ outputs/
 └── ranked_candidates.xlsx
 ```
 
+### Live Sandbox Deployment
+
+You can explore the ranked candidates and their detailed scoring breakdown visually via our deployed Streamlit application:
+
+🔗 **[Live Demo: Redrob Ranker Sandbox](https://redrobranker.streamlit.app/)**
+
 ---
 
 ## Design Principles
@@ -292,6 +299,7 @@ The architecture successfully scales to datasets containing 100,000+ candidate p
 ## Submission Artifacts
 
 - GitHub Repository
+- Interactive Streamlit Dashboard (`app.py`)
 - Ranked Candidate CSV
 - Ranked Candidate XLSX
 - Methodology Documentation

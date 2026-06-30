@@ -61,7 +61,8 @@ def keyword_score(candidate: Candidate) -> float:
         
     score += role_penalty(candidate)
 
-    return score
+    # Normalize to [0.0, 1.0] based on an expected max of 100 points
+    return min(max(score / 100.0, 0.0), 1.0)
 
 def explain_keyword_score(candidate):
 
