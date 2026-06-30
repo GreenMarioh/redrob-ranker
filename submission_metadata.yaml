@@ -31,7 +31,7 @@ github_repo: "https://https://github.com/GreenMarioh/redrob-ranker"
 # Required. Must be reachable. Private repos OK if you can grant organizer
 # access at Stage 3 (the email to add will be communicated then).
 
-sandbox_link: "https://YOUR_USERNAME-redrob-ranker.streamlit.app"
+sandbox_link: "https://redrobranker.streamlit.app/"
 # Required. Streamlit Cloud deployment. Deploy via https://share.streamlit.io
 # by connecting your GitHub repo and setting app.py as the main file.
 
@@ -43,11 +43,11 @@ reproduce_command: "python scripts/export_submission.py"
 # Compute environment
 # ============================================================================
 compute:
-  platform: "MacBook Pro M2" # Or: "AWS EC2 c5.4xlarge", "Local Linux box", etc.
+  platform: "Windows 11" # Or: "AWS EC2 c5.4xlarge", "Local Linux box", etc.
   cpu_cores: 8 # Number of CPU cores used
   ram_gb: 16 # Available RAM in GB
-  python_version: "3.11.4" # python --version
-  os: "macOS 14.2" # Or "Ubuntu 22.04 LTS", etc.
+  python_version: "3.12.10" # python --version
+  os: "Windows 11" # Or "Ubuntu 22.04 LTS", etc.
   uses_gpu_for_inference: false # Must be false — see compute constraints
   has_network_during_ranking: false # Must be false — no API calls during ranking
   pre_computation_required: false # true if you pre-compute embeddings or train models offline
@@ -61,13 +61,10 @@ compute:
 # your code or your interview are flagged.
 ai_tools_used:
   - "Claude"
-  - "GitHub Copilot"
+  - "ChatGPT"
 
 ai_usage_summary: |
-  Used Claude for architecture discussion, code review, and debugging ranking logic.
-  Used GitHub Copilot for autocomplete during development.
-  No candidate data was fed to any LLM. All ranking is performed offline
-  using rule-based scoring with no external API calls.
+  Used Claude and ChatGPT for architecture discussion, code review, and debugging ranking logic.
 
 # ============================================================================
 # Approach summary (optional but recommended)
