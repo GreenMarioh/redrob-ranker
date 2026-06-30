@@ -25,7 +25,12 @@ max_score = max(raw_scores)
 score_range = max_score - min_score
 
 rows = []
-for rank, (score, candidate) in enumerate(ranked, start=1):
+TOP_K = 100
+
+for rank, (score, candidate) in enumerate(
+    ranked[:TOP_K],
+    start=1,
+):
     explanation = explain_candidate(candidate)
 
     # Calculate AI core skills by matching candidate skills with our known keywords
